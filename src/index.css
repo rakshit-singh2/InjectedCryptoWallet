@@ -1,0 +1,71 @@
+/* Rakshit Wallet — global base. Brand values mirror src/theme.js. */
+:root {
+  --rw-green: #0f8a4f;
+  --rw-green-dark: #07542f;
+  --rw-green-light: #e7f6ee;
+  --rw-orange: #f2621a;
+  --rw-orange-text: #b8470c;
+  --rw-orange-light: #fff1e7;
+  --rw-ink: #10231a;
+  --rw-muted: #55665d;
+  --rw-border: #dbe6df;
+  --rw-surface: #ffffff;
+  --rw-bg: #f4f8f5;
+  --rw-radius: 14px;
+  --rw-shadow: 0 6px 20px rgba(7, 84, 47, 0.08);
+
+  font-family: Inter, 'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  /* The wallet UI is designed light-only; never inherit dark-mode text on a light surface. */
+  color-scheme: light;
+  color: var(--rw-ink);
+  background-color: var(--rw-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 360px;
+  background: var(--rw-bg);
+}
+
+#root {
+  width: 100%;
+}
+
+a {
+  color: var(--rw-green);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--rw-green-dark);
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--rw-ink);
+  margin: 0 0 6px;
+  line-height: 1.25;
+}
+
+pre {
+  font-family: 'SFMono-Regular', Menlo, Consolas, monospace;
+}
+
+:focus-visible {
+  outline: 2px solid var(--rw-orange);
+  outline-offset: 2px;
+}

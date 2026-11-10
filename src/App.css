@@ -1,0 +1,326 @@
+/* ---------- Shell ---------- */
+.App {
+  width: 360px;
+  min-height: 600px;
+  max-height: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+  background: var(--rw-bg);
+  overflow: hidden;
+}
+
+.App.approval-app {
+  width: 100%;
+  max-height: none;
+  min-height: 100vh;
+}
+
+.headers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  background: var(--rw-surface);
+  border-bottom: 1px solid var(--rw-border);
+}
+
+.content {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ---------- Brand ---------- */
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-wordmark {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.brand-wordmark-primary {
+  color: var(--rw-green-dark);
+}
+
+.brand-wordmark-accent {
+  color: var(--rw-orange);
+  margin-left: 0.25em;
+}
+
+/* ---------- Welcome ---------- */
+.homepage {
+  justify-content: center;
+  gap: 12px;
+  padding: 24px 20px;
+  background:
+    radial-gradient(circle at 85% 10%, rgba(242, 98, 26, 0.14), transparent 45%),
+    radial-gradient(circle at 10% 90%, rgba(15, 138, 79, 0.16), transparent 50%);
+}
+
+.home-title {
+  font-size: 26px;
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+.home-tagline {
+  color: var(--rw-muted);
+  margin: 0 0 16px;
+}
+
+.home-points {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  display: grid;
+  gap: 6px;
+  text-align: left;
+  color: var(--rw-muted);
+  font-size: 13px;
+}
+
+.home-points li::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+  background: var(--rw-orange);
+}
+
+.frontPageButton {
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* ---------- Forms & onboarding ---------- */
+.enter-password-container {
+  width: 100%;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.mnemonic {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 13px;
+  color: var(--rw-orange-text);
+  background: var(--rw-orange-light);
+  border: 1px solid #ffd2b3;
+  border-radius: 10px;
+}
+
+.seedPhraseContainer {
+  width: 100%;
+  min-height: 120px;
+  border: 1px dashed var(--rw-green);
+  background: var(--rw-green-light);
+}
+
+.seedPhraseContainer pre {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ---------- Wallet ---------- */
+.wallet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  width: 100%;
+  padding: 10px 8px;
+  background: var(--rw-surface);
+  border-bottom: 1px solid var(--rw-border);
+}
+
+.wallet-header-actions {
+  display: flex;
+  flex-shrink: 0;
+  gap: 4px;
+}
+
+.wallet-header-actions .ant-btn {
+  color: var(--rw-green-dark);
+}
+
+.wallet-account-row {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.accountName {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.balance-container {
+  margin: 12px 12px 0;
+  padding: 18px 16px;
+  border-radius: var(--rw-radius);
+  color: #fff;
+  background: linear-gradient(135deg, #12a160 0%, var(--rw-green-dark) 100%);
+  box-shadow: var(--rw-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.balance-container::before {
+  content: '';
+  position: absolute;
+  right: -40px;
+  top: -50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.balance-container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ffb547, var(--rw-orange));
+}
+
+.balance-label {
+  position: relative;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.balance {
+  position: relative;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.balance-network {
+  position: relative;
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.walletView {
+  width: 100%;
+  text-align: left;
+}
+
+.walletView .ant-tabs-nav {
+  margin-bottom: 8px;
+}
+
+.sendRow {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.nftImage {
+  width: 240px;
+  height: 240px;
+  margin-bottom: 10px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.running-batches {
+  display: grid;
+  gap: 6px;
+  margin: 8px 12px 0;
+  text-align: left;
+}
+
+.settings-select {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  color: var(--rw-ink);
+  background: var(--rw-surface);
+  border: 1px solid var(--rw-border);
+  border-radius: 10px;
+}
+
+.settings-select:focus {
+  border-color: var(--rw-green);
+}
+
+/* ---------- Approval window ---------- */
+.approval-brand {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 0;
+}
+
+.approval-origin {
+  margin: 8px 0;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: var(--rw-orange-light);
+  border-left: 4px solid var(--rw-orange);
+}
+
+.approval-pre {
+  max-height: 220px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  padding: 10px;
+  font-size: 12px;
+  text-align: left;
+  background: var(--rw-bg);
+  border: 1px solid var(--rw-border);
+  border-radius: 8px;
+}
+
+.approval-batch-call {
+  margin-top: 8px;
+  padding: 10px;
+  text-align: left;
+  border: 1px solid var(--rw-border);
+  border-radius: 10px;
+  background: var(--rw-surface);
+}
+
+/* ---------- Ant Design touch-ups (stable class names only) ---------- */
+.App .ant-card {
+  width: 100%;
+  border: 1px solid var(--rw-border);
+  box-shadow: var(--rw-shadow);
+}
+
+.ant-list-item {
+  text-align: left;
+}
